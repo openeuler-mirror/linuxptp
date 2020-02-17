@@ -1,6 +1,6 @@
 Name:		linuxptp
 Version:	2.0
-Release:        2
+Release:        3
 Summary:	Linuxptp is an implementation of the Precision Time Protocol (PTP)
 Group:		System Environment/Base
 License:	GPLv2+
@@ -77,6 +77,6 @@ echo 'OPTIONS="-a -r"' > %{buildroot}%{_sysconfdir}/sysconfig/phc2sys
 %{_mandir}/man8/*.8*
 
 %changelog
-* Thu Nov 28 2019 openEuler BuildTeam<buildteam@openeuler.org> 2.0-1
+* Thu Nov 28 2019 openEuler BuildTeam<buildteam@openeuler.org> 2.0-3
 - Package Init
 
