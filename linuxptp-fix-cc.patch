@@ -1,0 +1,11 @@
+--- a/makefile	2018-08-13 05:08:43.000000000 +0800
++++ b/makefile	2023-04-20 15:32:29.324520400 +0800
+@@ -18,7 +18,7 @@
+ KBUILD_OUTPUT =
+ 
+ DEBUG	=
+-CC	= $(CROSS_COMPILE)gcc
++CC	?= $(CROSS_COMPILE)gcc
+ VER     = -DVER=$(version)
+ CFLAGS	= -Wall $(VER) $(incdefs) $(DEBUG) $(EXTRA_CFLAGS)
+ LDLIBS	= -lm -lrt $(EXTRA_LDFLAGS)

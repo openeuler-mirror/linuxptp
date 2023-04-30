@@ -1,6 +1,6 @@
 Name:		linuxptp
 Version:	2.0
-Release:        5
+Release:    6
 Summary:	Linuxptp is an implementation of the Precision Time Protocol (PTP)
 Group:		System Environment/Base
 License:	GPLv2+
@@ -11,6 +11,7 @@ Source2:	ptp4l.service
 
 patch0000: CVE-2021-3571.patch
 Patch0001: CVE-2021-3570.patch
+Patch0002: linuxptp-fix-cc.patch
 
 BuildRequires:	gcc gcc-c++ systemd git net-tools
 
@@ -81,6 +82,9 @@ echo 'OPTIONS="-a -r"' > %{buildroot}%{_sysconfdir}/sysconfig/phc2sys
 %{_mandir}/man8/*.8*
 
 %changelog
+* Wed Apr 19 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 2.0-6
+- Fix CC compiler support
+
 * Wed Sep 22 2021 yaoxin <yaoxin30@huawei.com> - 2.0-5
 - Fix CVE-2021-3570
 
